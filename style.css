@@ -329,11 +329,68 @@ button:focus-visible {
   margin-bottom: 16px;
 }
 
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-color: #FFFFFF;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  padding: 6px 16px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--color-text-light);
+  margin-bottom: 16px;
+}
+
+.hero-text h1 em {
+  font-style: italic;
+  color: var(--color-primary-dark);
+  font-family: var(--font-heading);
+}
+
 .hero-sub {
   font-size: 1.05rem;
   color: var(--color-text-light);
-  margin-bottom: 28px;
+  margin-bottom: 24px;
   max-width: 540px;
+}
+
+.hero-features {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.hero-feature {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--color-navy);
+}
+
+.hero-feature-icon {
+  font-size: 1.1rem;
+}
+
+.hero-insurance {
+  font-size: 0.9rem;
+  color: var(--color-text-light);
+  margin-bottom: 24px;
+}
+
+.hero-insurance strong {
+  color: var(--color-navy);
+}
+
+.hero-note {
+  font-size: 0.85rem;
+  color: var(--color-text-light);
+  margin-top: 10px;
+  text-align: center;
 }
 
 .hero-buttons {
@@ -344,6 +401,12 @@ button:focus-visible {
 
 .hero-buttons .btn {
   width: 100%;
+}
+
+.hero-buttons .btn-large {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero-visual {
@@ -894,6 +957,14 @@ button:focus-visible {
   }
 
   h1 { font-size: 3.2rem; }
+
+  .hero-note {
+    text-align: left;
+  }
+
+  .hero-buttons .btn-large {
+    width: auto;
+  }
 
   .hero {
     padding: 80px 0;
