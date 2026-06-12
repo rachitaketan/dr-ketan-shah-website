@@ -414,47 +414,64 @@ button:focus-visible {
   justify-content: center;
 }
 
-.hero-graphic {
+.hero-photo-wrap {
   position: relative;
   width: 100%;
-  max-width: 380px;
-  aspect-ratio: 1 / 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  max-width: 420px;
+  margin-bottom: 24px;
 }
 
-.hero-graphic-ring {
+.hero-photo {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  display: block;
+}
+
+.hero-overlay-card {
   position: absolute;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 60%, #FFFFFF 100%);
-  opacity: 0.18;
-  border: 2px solid var(--color-primary-light);
-}
-
-.hero-graphic-card {
-  position: relative;
+  bottom: -16px;
+  right: 12px;
   background-color: #FFFFFF;
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-md);
-  padding: 28px;
+  padding: 14px 18px;
   text-align: center;
-  max-width: 240px;
+  max-width: 160px;
   border-top: 4px solid var(--color-primary);
 }
 
-.hero-icon {
-  font-size: 2.5rem;
-  display: block;
-  margin-bottom: 12px;
+@media (min-width: 480px) {
+  .hero-overlay-card {
+    right: 16px;
+    padding: 18px 22px;
+    max-width: 200px;
+  }
 }
 
-.hero-graphic-card p {
+.hero-icon {
+  font-size: 1.5rem;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.hero-overlay-card p {
   font-weight: 700;
   color: var(--color-navy);
-  font-size: 0.95rem;
+  font-size: 0.75rem;
+  margin: 0;
+}
+
+@media (min-width: 480px) {
+  .hero-icon {
+    font-size: 2rem;
+    margin-bottom: 8px;
+  }
+
+  .hero-overlay-card p {
+    font-size: 0.85rem;
+  }
 }
 
 /* ---------- Highlights ---------- */
