@@ -151,6 +151,8 @@ button:focus-visible {
   align-items: center;
   justify-content: space-between;
   height: 72px;
+  gap: 12px;
+  overflow: hidden;
 }
 
 .logo {
@@ -159,12 +161,16 @@ button:focus-visible {
   gap: 10px;
   font-family: var(--font-body);
   color: var(--color-navy);
+  flex-shrink: 0;
+  max-width: 60%;
 }
 
 .logo-mark {
   height: 36px;
-  width: auto;
+  width: 36px;
+  object-fit: contain;
   display: block;
+  flex-shrink: 0;
 }
 
 .logo-fallback {
@@ -185,12 +191,17 @@ button:focus-visible {
   display: flex;
   flex-direction: column;
   line-height: 1.2;
+  min-width: 0;
+  overflow: hidden;
 }
 
 .logo-name {
   font-family: var(--font-heading);
   font-size: 1.05rem;
   color: var(--color-navy);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .logo-sub {
@@ -870,9 +881,10 @@ button:focus-visible {
 
   .main-nav a {
     border-bottom: none;
-    padding: 10px 14px;
-    font-size: 0.95rem;
+    padding: 10px 12px;
+    font-size: 0.9rem;
     border-radius: 999px;
+    white-space: nowrap;
   }
 
   .main-nav a:hover,
