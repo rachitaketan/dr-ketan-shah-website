@@ -362,21 +362,15 @@ button:focus-visible {
   align-items: center;
 }
 
-.about-placeholder {
+.about-photo {
   width: 100%;
   max-width: 320px;
   aspect-ratio: 4 / 5;
-  background-color: var(--color-primary-light);
+  object-fit: cover;
+  object-position: top center;
   border-radius: var(--radius-lg);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: var(--color-primary-dark);
-  font-weight: 700;
-  font-family: var(--font-heading);
-  font-size: 1.1rem;
-  border: 2px dashed var(--color-primary);
+  background-color: var(--color-primary-light);
+  box-shadow: var(--shadow-md);
 }
 
 .about-text h2 {
