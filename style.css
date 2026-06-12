@@ -314,7 +314,7 @@ button:focus-visible {
 
 /* ---------- Hero ---------- */
 .hero {
-  background-color: var(--color-bg-alt);
+  background: linear-gradient(135deg, var(--color-primary-light) 0%, var(--color-bg-alt) 55%, #FFFFFF 100%);
   padding: 50px 0;
 }
 
@@ -334,12 +334,12 @@ button:focus-visible {
   align-items: center;
   gap: 6px;
   background-color: #FFFFFF;
-  border: 1px solid var(--color-border);
+  border: 1px solid var(--color-primary-light);
   border-radius: 999px;
   padding: 6px 16px;
   font-size: 0.85rem;
   font-weight: 700;
-  color: var(--color-text-light);
+  color: var(--color-primary-dark);
   margin-bottom: 16px;
 }
 
@@ -429,7 +429,8 @@ button:focus-visible {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--color-primary-light), #FFFFFF);
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 60%, #FFFFFF 100%);
+  opacity: 0.18;
   border: 2px solid var(--color-primary-light);
 }
 
@@ -441,6 +442,7 @@ button:focus-visible {
   padding: 28px;
   text-align: center;
   max-width: 240px;
+  border-top: 4px solid var(--color-primary);
 }
 
 .hero-icon {
@@ -508,17 +510,15 @@ button:focus-visible {
   background-color: #FFFFFF;
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-md);
-  padding: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  overflow: hidden;
+  aspect-ratio: 4 / 5;
 }
 
 .about-photo {
   width: 100%;
   height: 100%;
-  object-fit: contain;
-  object-position: center;
+  object-fit: cover;
+  object-position: top center;
 }
 
 .about-text h2 {
@@ -1004,6 +1004,7 @@ button:focus-visible {
     max-width: none;
     width: 100%;
     height: 100%;
+    aspect-ratio: auto;
   }
 
   .benefit-grid {
